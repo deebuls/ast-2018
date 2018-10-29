@@ -1,4 +1,3 @@
-
 def say_hello():
     """Print Hello world"""
     print("Hello World!")
@@ -12,7 +11,7 @@ def loop(ex):
 
 def tic_tac():
     word = ""
-    loop_count = 5
+    loop_count = 6
     for i in range(1,loop_count):
         if ( i%2 == 0 ):
             print ("---------")
@@ -23,21 +22,16 @@ def tic_tac_2():
     columns=26
     rows=18
     string = ""
+    iterator = 0
     for r in range(rows):
-        for c in range(columns):
-            if ( r%3 == 0):
-                if (c%2 == 0):
-                    string == string + '='
-                    print ("Something")
-            elif(r%5 == 0):
-                if (c%2 == 0):
-                    string == string + '+'
-            else:
-                if (c%2 == 0):
-                    string == string + '-'
-                x=0
-        print (string)
-        string = ""
+        iterator+=1
+        if (iterator%2 != 0 ):
+            print ("  |  |  H  |  |  H  |  |  ")
+        elif (iterator == 6 or iterator == 12 ):
+            print ("--+--+--H--+--+--H--+--+--")
+        elif (iterator%2== 0):
+            print (string)
+            string = ""
 
 def fizz():
     result = 0
@@ -156,6 +150,9 @@ if __name__ == '__main__':
     #loop(1024)
     #print (say_hello.__doc__)
     #deg()
+    # fizz()
+    # tic_tac()
+    # tic_tac_2()
     # collatz(1000000)
     # python_interactive()
     # tuples_gcd(10, 25) # => 5
