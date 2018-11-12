@@ -8,6 +8,7 @@ public class statistics
     private int array_of_numbers[];
 
 
+
     public void accept_inputs()
     {
       boolean ch=true;
@@ -85,12 +86,10 @@ public class statistics
       this.calculate_statistics();
     }
 
+    public static void main(String[] args)
+    {
+      statistics obj=new statistics();
+      obj.start_operation();
+    }
 
-
-    public static void main(String []args)
-     {
-        System.out.println("Hello World");
-        statistics obj=new statistics();
-        obj.start_operation();
-     }
 }
